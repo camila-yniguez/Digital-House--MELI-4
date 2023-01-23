@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+@import url('login.css');
+@import url('editProfile.css');
+@import url('register.css');
 
 /* VARIABAES */ 
 :root {
@@ -20,7 +23,6 @@
 }
 
 /* ESTILOS GENERALES */
-/* selector * significa que a todos los elementos del * le coloque todas esas propiedades*/
 
 * {
     margin: 0;
@@ -30,8 +32,9 @@
 }
 
 a {
-    color: black;
+    color: darkblue;
     text-decoration: none;
+    font-size: 0.8rem;
 }
 
 li {
@@ -92,91 +95,56 @@ header div.burger-menu {
     /* si quiero colocar 4 valores: top right borrom left */ 
 }
 
-/* PRODUCTOS */
+/* REGISTER */
 
-main.home__productos {
-    width: 90%;
-    margin: 0 auto;
+.register__title {
+    text-align: center;
+    font-family: var(--titulos);
 }
 
-.seccion__productos--global{
+hr{
+    margin-bottom: 2rem;
+}
+
+.register__container--global{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    margin-top: 5px;
-}
-
-.seccion__productos--tarjeta{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    box-shadow: 5px 5px 15px rgba(0,0, 0, 0.3);
-    box-sizing: border-box;
-    margin: 0.5rem;
-    max-width: 200px;
-    min-height: 236px;
-    width: 50%;
-    flex-grow: 1;
-    transition: all 450ms;
-}
-
-.seccion__productos--tarjeta:hover {
-    box-shadow: 5px 5px 10px rgb(100, 100, 100);
-}
-
-.home__product--details{
-    border-top: 1px solid var(--gris-claro);
-    padding: 15px;
+    background-color: var(--gris-claro);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    margin: 2rem auto;
+    border-radius: 2%;
     background-color: white;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    position: relative;
 }
 
-.home__product--details .price{
+.input__container, 
+.button__container{
     display: flex;
-    width: 30%;
-    padding-bottom: 1rem;
-    position: relative;
-    padding-left: 1.5px;
+    flex-direction: column;
+    margin-bottom: 1rem;
 }
 
-.title__products {
+span.error--message{
     display: none;
 }
 
-/* ESTILOS Y COLORES*/
-.text-green {
-    color: var(--verde);
-    display: flex;
-    width: 70%;
-    margin-left: 5px;
+input.input-style, .input{
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    height: 2rem;
+    padding: 0 0.5rem;
+    outline: none;
+    color: black;
+    font-weight: 550;
 }
 
-a.home__second--title {
-    display: flex;
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 0.5;
-    text-align: center;
+input.input-style::placeholder {
+    font-weight: 400;
 }
 
-main section article i{
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid var(--verde);
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
-    color: var(--verde);
-}
 
 /* FOOTER */
 
@@ -246,42 +214,7 @@ footer span {
     div.burger-menu{
         display: none;
     }
-    .title__products {
-        display: flex;
-        font-weight: 400;
-        align-items: center;
-    }
-    .text-green {
-        display: flex;
-        width: fit-content;
-        margin-left: 25px;
-    }
-}
-
-@media (min-width:700px){
-
-    .seccion__productos--tarjeta{
-        margin: 5vw;
-        padding: 25px;
-        background-color: white;
-    }
 }
 
 
 /* Desktop */
-
-@media(min-width:1031px){
-    .seccion__productos--tarjeta{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        box-shadow: 5px 5px 15px rgba(0,0, 0, 0.3);
-        box-sizing: border-box;
-        margin: 1rem;
-        min-width: 200px;
-        min-height: 236px;
-        width: 50%;
-        flex-grow: 1;
-        transition: all 450ms;
-    }
-}
