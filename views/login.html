@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="../css/forms.css">
         <!-- Font Awesome -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
-        <title>Register</title>
+        <title>Login</title>
     </head>
     
     <body>
@@ -50,33 +50,33 @@
             
         </header>
 
-        <div class="register__container--global">
+        <div class="register__container--global login__first">
             <h2 class="register__title">Login</h2>
             <hr>
             <form action="" method="" class="register__container">
-                <div class="form">
-                    <div class="input__container">
-                        <input class="input-style" type="user" name="user" placeholder="Ingrese su nombre de usuario">
-                        <span class="error-message">Debe ingresar su usuario</span>
-                    </div>
-                    <div class="input__container">
-                        <input class="input-style" type="password" name="pass" placeholder="Ingrese su contraseña">
-                        <span class="error-message">Debe ingresar su contraseña</span>
-                    </div>
-                    <div class="button__container">
-                        <span class="error--message">Credenciales inválidas</span>
-                        <button type="submit" class="btn btn-submit">Ingresar</button>
-                    </div>
-                    <span><a href="">¿Olvidaste tu contraseña?</a></span>
-                    <div class="button__container">
-                        <button class="btn"><span><a href="/register">Aún no tengo cuenta</a></span></button>
-                    </div>
-
-                    <div class="button__container">
-                        <button class="btn"><a href="/">Volver al inicio</a></button>
-                    </div>
-                
+                <div class="input__container">
+                    <input class="input-style" type="user" name="user" placeholder="Ingrese su usuario">
+                    <span class="error--message">Debe ingresar su usuario</span>
                 </div>
+                <div class="input__container">
+                    <input class="input-style" type="password" name="pass" placeholder="Ingrese su contraseña">
+                    <span class="error--message">Debe ingresar su contraseña</span>
+                </div>
+                <div class="button__container">
+                    <span class="error--message">Credenciales inválidas</span>
+                    <button type="submit" class="btn btn__submit">Ingresar</button>
+                </div>
+                <div class="button__container">
+                    <button class="btn"><a href="">¿Olvidaste tu contraseña?</a></button>
+                </div>
+                <div class="button__container">
+                    <button class="btn"><span><a href="/register">Aún no tengo cuenta</a></span></button>
+                </div>
+
+                <div class="button__container">
+                    <button class="btn"><a href="/home">Volver al inicio</a></button>
+                </div>
+
             </form>
         </div>
 
